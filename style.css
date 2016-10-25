@@ -6,7 +6,6 @@ html, body {
   margin: 0;
   padding: 0;
   background: rgb(237, 235, 239);
-/*  z-index: -10000;*/
 }
 
 
@@ -46,7 +45,6 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-/*  z-index: -1000;*/
 }
 
 header {
@@ -230,22 +228,6 @@ img {
   border-radius: 60px;
 }
 
-/*
-.leg-cntnr {
-  width: 100%;
-  height: 850px;
-  position: absolute;
-  top: 70px;
-  outline: 3px solid yellow;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);        
-          transform: translate(-50%, 0);
-  z-index: -10000;
-}
-*/
-
 .left-leg {
   width: 837px;
   height: 50px;
@@ -256,7 +238,6 @@ img {
   position: relative;
   top: 380px;
   left: -57px;
-/*  z-index: -500;*/
   -webkit-box-shadow: 0px 3px rgb(108, 90, 58);
   -moz-box-shadow: 0px 3px rgb(108, 90, 58);
   box-shadow: 0px 3px rgb(108, 90, 58);
@@ -271,7 +252,6 @@ img {
   position: relative;
   top: 267px;
   left: 96px;
-/*  z-index: -250;*/
 }
 .right-leg {
   width: 837px;
@@ -280,7 +260,6 @@ img {
   position: relative;
   top: 330px;
   right: -222px;
-/*  z-index: -500;*/
   -webkit-box-shadow: 0px 3px rgb(108, 90, 58);
   -moz-box-shadow: 0px 3px rgb(108, 90, 58);
   box-shadow: 0px 3px rgb(108, 90, 58);
