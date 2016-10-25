@@ -1,71 +1,91 @@
 
-  $(document).ready(function() {
-  // all code goes in here
-  })
+$(document).ready(function() {
+    
+    var color = "white";
+    
+    $("#white").addClass("border");
+    
+    $('#red').on("click", function() {
+      color = "red";
+      $("#blue").removeClass("border");
+      $("#green").removeClass("border");
+      $("#yellow").removeClass("border");
+      $("#white").removeClass("border");
+      $("#erase").removeClass("border");
+      $(this).addClass("border");
+    });
 
-  $('.box').on('click', function() {
-    $('this').addClass('white');
-  })
+    $('#blue').on('click', function() {
+      color = 'blue';
+      $("#green").removeClass("border");
+      $("#yellow").removeClass("border");
+      $("#white").removeClass("border");
+      $("#red").removeClass("border");
+      $("#erase").removeClass("border");
+      $(this).addClass("border");
+    });
 
-  $('#reset').on('click', function() {
-    $('.box').removeClass('white')
-  })
+    $('#green').on('click', function() {
+      color = 'green';
+      $("#blue").removeClass("border");
+      $("#yellow").removeClass("border");
+      $("#white").removeClass("border");
+      $("#red").removeClass("border");
+      $("#erase").removeClass("border");
+      $(this).addClass("border");
+    });
 
-  $('.box').on('click', function() {
-    $(this).addClass('white');
-  })
+    $('#yellow').on('click', function() {
+      color = 'yellow';
+      $("#blue").removeClass("border");
+      $("#green").removeClass("border");
+      $("#white").removeClass("border");
+      $("#red").removeClass("border");
+      $("#erase").removeClass("border");
+      $(this).addClass("border");
+    });
 
-  $('.box').on('dblclick', function() {
-    $(this).removeClass('white');
-  })
+    $('#white').on('click', function() {
+      color = 'white';
+      $("#blue").removeClass("border");
+      $("#green").removeClass("border");
+      $("#yellow").removeClass("border");
+      $("#red").removeClass("border");
+      $("#erase").removeClass("border");
+      $(this).addClass("border");
+    });
+    
+    $('#erase').on('click', function() {
+      color = 'erase';
+      $("#blue").removeClass("border");
+      $("#green").removeClass("border");
+      $("#yellow").removeClass("border");
+      $("#red").removeClass("border");
+      $("#white").removeClass("border");
+      $(this).addClass("border");
+    });
+    
+    var isDown = false;
+    $('.box').on('mousedown', function() {
+      isDown = true;
+    }).on('mouseup', function() {
+      isDown = false;
+    });
+  
+    $('.box').on('mouseover', function() {
+      if(isDown) {
+        $(this).addClass(color);
+      }
+    });
+  
+    var colors = 'white red blue green yellow';
 
-  $('#reset').on('click', function() {
-    $('.box').removeClass('white')
-  })
+    $('.box').on('dblclick', function() {
+      $(this).removeClass(colors);
+    });
 
-  var color = 'white'
- 
-  $('#red').on('click', function() {
-    color = 'red';
-  })
-
-  $('#blue').on('click', function() {
-    color = 'blue';
-  })
-
-  $('#green').on('click', function() {
-    color = 'green';
-  })
-
-  $('#yellow').on('click', function() {
-    color = 'yellow';
-  })
-
-  $('#white').on('click', function() {
-    color = 'white';
-  })
- 
-  $('.box').on('click', function() {
-    $(this).addClass(color);
-  })
-
-  $('.box').on('dblclick', function() {
-    $(this).removeClass(color);
-  })
-
-  $('#reset').on('click', function() {
-    $('.box').removeClass(color)
-  })
-
-  $('.box').removeClass('red blue green yellow white');
-
-  var colors = 'white green red blue yellow'
-
-  $('.box').on('dblclick', function() {
-    $(this).removeClass(colors);
-  })
-
-  $('#reset').on('click', function() {
-    $('.box').removeClass(colors)
-  })
-
+    $('#reset').on('click', function() {
+      $('.box').removeClass(colors);
+    });
+    
+});
